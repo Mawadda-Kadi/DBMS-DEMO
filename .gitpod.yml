@@ -1,0 +1,8 @@
+tasks:
+  - init: >
+      sudo apt-get update &&
+      sudo apt-get install -y postgresql postgresql-contrib &&
+      sudo service postgresql start &&
+      sudo -u postgres createuser -s gitpod &&
+      sudo -u postgres createdb gitpod
+    command: echo "PostgreSQL has been installed and started"
