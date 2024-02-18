@@ -1,8 +1,12 @@
+image:
+  file: .gitpod.dockerfile
 tasks:
-  - init: >
-      sudo apt-get update &&
-      sudo apt-get install -y postgresql postgresql-contrib &&
-      sudo service postgresql start &&
-      sudo -u postgres createuser -s gitpod &&
-      sudo -u postgres createdb gitpod
-    command: echo "PostgreSQL has been installed and started"
+ - init: . ${GITPOD_REPO_ROOT}/.vscode/init_tasks.sh
+vscode:
+  extensions:
+    - ms-python.python
+    - formulahendry.auto-close-tag
+    - mkaufman.HTMLHint
+    - eventyret.bootstrap-4-cdn-snippet
+    - kevinglasson.cornflakes-linter
+    - hookyqr.beautify
