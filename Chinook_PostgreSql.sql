@@ -1,3 +1,4 @@
+sudo service postgresql start
 
 /*******************************************************************************
    Chinook Database - Version 1.4.5
